@@ -1,24 +1,24 @@
-# ⚡ Android Startup Manager
+# 🚀 Android Startup Manager
 
-Disable apps from auto-starting at boot — improve boot time and reduce memory footprint.
+Control which apps start at boot — disable slow startups, improve boot time.
 
 ## Tools
 
-| Script | What it does |
-|--------|-------------|
-| `list_startup.py` | Show all apps configured to auto-start |
-| `disable_startup.py` | Disable auto-start for specific apps |
-| `analyze.py` | Measure boot time impact per app |
+| Tool | What it does |
+|------|-------------|
+| `startup_scan.py` | Find all apps registered to start at boot |
+| `startup_disable.py` | Batch disable startup for apps |
+| `boot_time_monitor.py` | Measure actual boot time before/after optimizations |
 
-## Usage
+## Quick start
 
 ```bash
-# Show all startup apps
-python3 list_startup.py
+# See what's starting at boot
+python3 startup_scan.py
 
-# Disable specific app from starting
-python3 disable_startup.py com.facebook.katana
+# Disable slow starters (interactive)
+python3 startup_disable.py --interactive
 
-# Measure startup impact
-python3 analyze.py
+# Measure boot time impact
+python3 boot_time_monitor.py
 ```
